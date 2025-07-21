@@ -60,7 +60,7 @@ app.post("/register", async (req, res) => {
       id,
       email,
       name: email,
-    });
+    } as { id: string; email: string; name: string });
 
     // Create token for user
     const token = client.createToken(id);
